@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import Providers from "./Providers";
 
 export const metadata = {
   title: "Create Next App",
@@ -9,7 +9,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-[#F8FAFF]">{children}</body>
+      <body className="min-h-screen bg-[#F8FAFF]">
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }

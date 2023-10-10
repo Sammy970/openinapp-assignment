@@ -14,6 +14,9 @@ module.exports = {
         montserrat: ["Montserrat", "sans-serif"],
         lato: ["Lato", "sans-serif"],
       },
+      backgroundImage: {
+        "blue-gradient": "linear-gradient(180deg, #4285F4 0%, #286DE0 100%)",
+      },
     },
   },
   plugins: [],
