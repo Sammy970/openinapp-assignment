@@ -4,6 +4,7 @@ import { useSession } from "next-auth/react";
 import NavDash from "./NavDash";
 import StatusCards from "./StatusCard/StatusCard";
 import BarChartCard from "./BarChart/BarChartCard";
+import TwoCards from "./TwoCards/TwoCards";
 
 const MainDash = () => {
   const session = useSession();
@@ -21,7 +22,7 @@ const MainDash = () => {
       <NavDash profileImage={profileImage} email={profileEmail} />
       <StatusCards />
       <BarChartCard />
-      <StatusCards />
+      <TwoCards />
     </section>
   );
 };

@@ -59,8 +59,8 @@ const BarChartCard = () => {
   };
 
   return (
-    <div className="flex p-10 max-sm:p-3 justify-center items-center flex-col w-full mt-6 shadow-lg rounded-[20px] border-[3px] bg-white">
-      <div className="w-full  flex items-center justify-start">
+    <div className="flex p-10 max-sm:p-3 justify-center items-center flex-col w-full mt-6 shadow-lg rounded-[20px] border-[3px] bg-white border-[#E0E0E0]">
+      <div className="w-full flex items-center justify-start pl-2">
         <h1 className="font-montserrat font-bold text-xl">Activites</h1>
       </div>
       <div className="max-sm:h-[200px]  w-full h-[400px] ">
