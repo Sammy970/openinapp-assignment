@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import BasicOption from "./BasicOption";
 import ContactOption from "./ContactOption";
 
@@ -20,6 +20,20 @@ const ProfileCardModal = ({ setShowModal }) => {
 
   console.log(basicInfo);
 
+  useEffect(() => {
+    // Check local storage for existing data and populate the state if it exists
+    const storedBasicInfo = JSON.parse(localStorage.getItem("basicInfo"));
+    const storedContactInfo = JSON.parse(localStorage.getItem("contactInfo"));
+
+    if (storedBasicInfo) {
+      setBasicInfo(storedBasicInfo);
+    }
+
+    if (storedContactInfo) {
+      setContactInfo(storedContactInfo);
+    }
+  }, []);
+
   const handleClose = (event) => {
     event.preventDefault();
     setShowModal(false);
@@ -27,10 +41,19 @@ const ProfileCardModal = ({ setShowModal }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Submitted");
-    localStorage.setItem("basicInfo", JSON.stringify(basicInfo));
-    localStorage.setItem("contactInfo", JSON.stringify(contactInfo));
-    setShowModal(false);
+
+    if (
+      basicInfo.name.trim() !== "" &&
+      basicInfo.email.trim() !== "" &&
+      basicInfo.phone.trim() !== ""
+    ) {
+      console.log("Submitted");
+      localStorage.setItem("basicInfo", JSON.stringify(basicInfo));
+      localStorage.setItem("contactInfo", JSON.stringify(contactInfo));
+      setShowModal(false);
+    } else {
+      alert("Please fill in all the required fields.");
+    }
   };
 
   return (
