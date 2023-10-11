@@ -3,6 +3,7 @@ import React from "react";
 import { useSession } from "next-auth/react";
 import NavDash from "./NavDash";
 import StatusCards from "./StatusCard/StatusCard";
+import BarChartCard from "./BarChart/BarChartCard";
 
 const MainDash = () => {
   const session = useSession();
@@ -12,11 +13,14 @@ const MainDash = () => {
       ? session.data.user.image
       : "/icons/avatarIcon.png";
 
-  let profileEmail = session.status === "authenticated" ? session.data.user.email : "Loading...";
+  let profileEmail =
+    session.status === "authenticated" ? session.data.user.email : "Loading...";
 
   return (
     <section className="p-10 h-screen">
-      <NavDash profileImage={profileImage} email={profileEmail}  />
+      <NavDash profileImage={profileImage} email={profileEmail} />
+      <StatusCards />
+      <BarChartCard />
       <StatusCards />
     </section>
   );
