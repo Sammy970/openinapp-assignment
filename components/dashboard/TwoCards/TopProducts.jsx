@@ -32,8 +32,8 @@ const TopProducts = () => {
         </h1>
       </div>
       <div className="flex items-center justify-between m-auto w-full max-sm:flex-col">
-        <div className="h-[150px] w-full">
-          <ResponsiveContainer width="95%" className="m-auto">
+        <div className="h-[150px] w-60">
+          <ResponsiveContainer width="90%" className="m-auto">
             <PieChart className="-mb-10">
               <Pie
                 data={data}
@@ -56,14 +56,16 @@ const TopProducts = () => {
         </div>
         <div className="flex flex-col items-start justify-center w-full">
           {data.map((entry, index) => (
-            <div key={`legend-${index}`} className="flex items-center">
-              <span
-                className="w-3 h-3 rounded-full mr-2"
-                style={{ backgroundColor: COLORS[index % COLORS.length] }}
-              ></span>
+            <div key={`legend-${index}`} className="flex items-center w-full">
               <div className="flex flex-col py-2">
-                <h3>{entry.name}</h3>
-                <p>{entry.value}%</p>
+                <div className="flex items-center justify-start">
+                  <span
+                    className="w-3 h-3 rounded-full mr-2"
+                    style={{ backgroundColor: COLORS[index % COLORS.length] }}
+                  ></span>
+                  <h3 className="font-montserrat font-bold">{entry.name}</h3>
+                </div>
+                <p className="pl-5">{entry.value}%</p>
               </div>
             </div>
           ))}

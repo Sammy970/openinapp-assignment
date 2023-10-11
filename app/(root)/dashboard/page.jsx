@@ -10,7 +10,7 @@ const page = () => {
   const session = useSession();
   // console.log(session);
   return (
-    <main className="flex min-h-screen max-lg:flex-col">
+    <main className="flex min-h-screen max-lg:flex-col mb-6">
       <section className="w-1/4 max-lg:hidden">
         <SideBar />
         {/* <h1>Dashboard Page</h1>
@@ -19,7 +19,7 @@ const page = () => {
       <section className="max-lg:block hidden">
         <TopBar />
       </section>
-      <section className="w-3/4 max-lg:w-full">
+      <section className="w-3/4 max-lg:w-full pb-10">
         <MainDash />
       </section>
     </main>
