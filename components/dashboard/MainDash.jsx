@@ -12,9 +12,11 @@ const MainDash = () => {
       ? session.data.user.image
       : "/icons/avatarIcon.png";
 
+  let profileEmail = session.status === "authenticated" ? session.data.user.email : "Loading...";
+
   return (
     <section className="p-10 h-screen">
-      <NavDash profileImage={profileImage} />
+      <NavDash profileImage={profileImage} email={profileEmail}  />
       <StatusCards />
     </section>
   );
