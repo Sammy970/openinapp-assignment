@@ -3,8 +3,8 @@ import React from "react";
 
 const SideBar = () => {
   return (
-    <div className="h-screen p-10 max-md:p-2">
-      <aside className="bg-blue-gradient rounded-[20px] p-5 text-white h-full flex flex-col">
+    <div className="h-screen p-10 max-md:p-2 fixed top-2">
+      <aside className=" bottom-20 bg-blue-gradient rounded-[20px] p-5 text-white h-full flex flex-col">
         <div className="pt-10 px-8 pb-5 text-left text-4xl font-bold">
           Board.
         </div>
@@ -26,10 +26,10 @@ const SideBar = () => {
             className="hover:bg-gray-700 px-4 py-2 rounded-md flex items-center justify-start gap-5"
           >
             <Image
-              src={"/icons/dashboard_icon.png"}
+              src={"/icons/transaction_icon.png"}
               width={17}
               height={17}
-              alt="Dashboard icon"
+              alt="Transaction icon"
             />
             Transactions
           </button>
@@ -38,10 +38,10 @@ const SideBar = () => {
             className="hover:bg-gray-700 px-4 py-2 rounded-md flex items-center justify-start gap-5"
           >
             <Image
-              src={"/icons/dashboard_icon.png"}
+              src={"/icons/schedule_icon.png"}
               width={17}
               height={17}
-              alt="Dashboard icon"
+              alt="Schedule icon"
             />
             Schedules
           </button>
@@ -50,10 +50,10 @@ const SideBar = () => {
             className="hover:bg-gray-700 px-4 py-2 rounded-md flex items-center justify-start gap-5"
           >
             <Image
-              src={"/icons/dashboard_icon.png"}
+              src={"/icons/user_icon.png"}
               width={17}
               height={17}
-              alt="Dashboard icon"
+              alt="Users icon"
             />
             Users
           </button>
@@ -62,10 +62,10 @@ const SideBar = () => {
             className="hover:bg-gray-700 px-4 py-2 rounded-md flex items-center justify-start gap-5"
           >
             <Image
-              src={"/icons/dashboard_icon.png"}
+              src={"/icons/setting_icon.png"}
               width={17}
               height={17}
-              alt="Dashboard icon"
+              alt="Settings icon"
             />
             Settings
           </button>

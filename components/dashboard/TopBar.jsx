@@ -39,10 +39,10 @@ const TopBar = () => {
               className="hover:bg-gray-700 hover:text-white px-4 py-2 rounded-md flex items-center justify-start gap-5"
             >
               <Image
-                src={"/icons/dashboard_icon.png"}
+                src={"/icons/transaction_icon.png"}
                 width={17}
                 height={17}
-                alt="Dashboard icon"
+                alt="Transaction icon"
               />
               Transactions
             </button>
@@ -51,10 +51,10 @@ const TopBar = () => {
               className="hover:bg-gray-700 hover:text-white px-4 py-2 rounded-md flex items-center justify-start gap-5"
             >
               <Image
-                src={"/icons/dashboard_icon.png"}
+                src={"/icons/schedule_icon.png"}
                 width={17}
                 height={17}
-                alt="Dashboard icon"
+                alt="Schedule icon"
               />
               Schedules
             </button>
@@ -63,10 +63,10 @@ const TopBar = () => {
               className="hover:bg-gray-700 hover:text-white px-4 py-2 rounded-md flex items-center justify-start gap-5"
             >
               <Image
-                src={"/icons/dashboard_icon.png"}
+                src={"/icons/user_icon.png"}
                 width={17}
                 height={17}
-                alt="Dashboard icon"
+                alt="Users icon"
               />
               Users
             </button>
@@ -75,10 +75,10 @@ const TopBar = () => {
               className="hover:bg-gray-700 hover:text-white px-4 py-2 rounded-md flex items-center justify-start gap-5"
             >
               <Image
-                src={"/icons/dashboard_icon.png"}
+                src={"/icons/setting_icon.png"}
                 width={17}
                 height={17}
-                alt="Dashboard icon"
+                alt="Settings icon"
               />
               Settings
             </button>
