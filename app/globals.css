@@ -7,3 +7,18 @@
 * {
   font-family: "Poppins", sans-serif;
 }
+
+.blue-bg {
+  background: linear-gradient(180deg, #4285f4 0%, #286de0 100%);
+  clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
+}
+
+@media (max-width: 640px) {
+  .blue-bg {
+    background: linear-gradient(180deg, #4285f4 0%, #286de0 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+@layer base {
+}

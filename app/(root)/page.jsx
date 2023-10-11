@@ -17,7 +17,7 @@ const page = () => {
     <>
       {session.status === "unauthenticated" && (
         <main className="flex flex-1 max-sm:flex-col min-h-screen">
-          <section className="w-2/5 max-sm:w-full bg-blue-gradient ">
+          <section className="w-2/5 max-sm:w-full blue-bg">
             <LeftSide />
           </section>
           <section className="w-3/5 max-sm:w-full">
